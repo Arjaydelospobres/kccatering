@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            color: black;
+        }
+
+        .reviews-section {
+            width: 60%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .reviews-section h1 {
+            text-align: center;
+            color: #FFD700; /* Gold Crayola */
+            font-family: 'Cursive';
+        }
+
+        .reviews-section h2 {
+            color: #007BFF; /* You can change this to the desired color */
+            border-bottom: 2px solid #FFD700; /* Gold Crayola */
+            padding-bottom: 10px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .review {
+            margin-bottom: 20px;
+        }
+
+        .review p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .review em {
+            color: #007BFF; /* You can change this to the desired color */
+        }
+
+        .view-more {
+            text-align: center;
+            cursor: pointer;
+            color: #007BFF; /* You can change this to the desired color */
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="reviews-section">
+        <h1>Reviews</h1>
+        <h2>Customer Comments</h2>
+        <div class="review">
+            <p>
+                I just wanted to give you some feedback from our event last evening. It was great! The guests really enjoyed the food and although we had more people than expected, we still had enough food. I think most people picked one or two things rather than have 1 of everything. So, it turned out really great. We had a lot of compliments on the food and many people were asking who the caterers were. We made sure to pass out the cards that were left and gave them Food for Thought’s information! I hope you get some calls from it! The bacon wrapped scallops were the most popular – there were gone first! Thanks again for everything! We are looking forward to Saturday’s event as well!
+            </p>
+            <em>Jennifer Sears, Ryan Homes</em>
+        </div>
+        <div class="review hidden">
+            <p>
+                We had a debrief meeting yesterday to review the entire weekend and everybody was very pleased with not only the quality of food but your service team as well. You guys are awesome! We even threw you some last-minute curve balls with this one (I’m still apologizing about the rental mix up) and you acted like it didn’t even phase you. We had record attendance this year, and it was a success all around! Kudos to you and Dee. Can’t wait to work with you guys again. Thanks for pulling off a great event, yet again!
+            </p>
+            <em>Ainsley Hertrich, Archmere Academy</em>
+        </div>
+        <div class="view-more" onclick="toggleViewMore()">▼ View More</div>
+    </div>
+
+    <script>
+        function toggleViewMore() {
+            const hiddenReviews = document.querySelectorAll('.hidden');
+            const viewMoreButton = document.querySelector('.view-more');
+            hiddenReviews.forEach(review => {
+                if (review.style.display === 'block') {
+                    review.style.display = 'none';
+                    viewMoreButton.textContent = '▼ View More';
+                } else {
+                    review.style.display = 'block';
+                    viewMoreButton.textContent = '▲ View Less';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
